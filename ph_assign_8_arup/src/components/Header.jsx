@@ -3,7 +3,7 @@ import { FaRegHeart } from "react-icons/fa";
 
 function Header() {
   return (
-    <div className="w-[90%] mx-auto px-2 md:px-5 md:py-2 flex justify-between items-center gap-5 font-semibold  text-white ">
+    <div className=" px-2 md:px-5 md:py-2 flex justify-between items-center gap-5 font-semibold  text-white ">
       <div>
         <h3>Gadget Heaven</h3>
       </div>

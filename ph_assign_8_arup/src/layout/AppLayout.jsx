@@ -7,28 +7,14 @@ import Heading from "../components/Heading";
 import { useEffect, useState } from "react";
 
 function AppLayout() {
-  const { pathname } = useLocation();
-  const [title, setTitle] = useState("");
-  const [paragraph, setParagraph] = useState("");
-
-  useEffect(() => {
-    if (pathname === "/") {
-      setTitle("Upgrade Your Tech Accessorize with Gadget Heaven Accessories");
-      setParagraph(
-        "Explore the latest gadgets that will take your experience to the next level. From smart devices to the coolest accessories, we have it all!"
-      );
-    }
-  }, [pathname]);
-
   return (
     <div className="sora-font">
-      <div className={`${pathname === "/" ? "bg-custom rounded-md" : ""}`}>
+      <div className="w-[95%] mx-auto bg-custom">
         <Header />
 
-        <Heading title={title} paragraph={paragraph} />
+        <Heading />
       </div>
-
-      <div className="min-h-[60vh]]">
+      <div className="min-h-[75vh]">
         <Outlet />
       </div>
 
