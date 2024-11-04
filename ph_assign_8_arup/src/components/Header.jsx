@@ -1,10 +1,15 @@
 import { GiShoppingCart } from "react-icons/gi";
 import { FaRegHeart } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+import { useCartContext } from "../context/CartContextProvider";
+import { useWishListContext } from "../context/WishListContextProvider";
 
 function Header() {
+  const { cart } = useCartContext();
+  const { wishList } = useWishListContext();
+
   return (
-    <div className=" px-2 md:px-5 md:py-2 flex justify-between items-center gap-5 font-semibold   ">
+    <div className=" px-2 md:px-5 md:py-4 flex justify-between items-center gap-5 font-semibold   ">
       <div>
         <h3 className="text-lg">Gadget Heaven</h3>
       </div>
@@ -42,17 +47,44 @@ function Header() {
         </ul>
       </details>
 
-      <div className="flex gap-1">
-        <p className="w-[30px] h-[30px] rounded-full   bg-white flex justify-center items-center">
-          <span className="text-black">
-            <GiShoppingCart />
-          </span>
-        </p>
-        <p className="w-[30px] h-[30px] rounded-full   bg-white flex justify-center items-center">
-          <span className="text-black">
-            <FaRegHeart />
-          </span>
-        </p>
+      <div>
+        <div className="flex items-center justify-center gap-4">
+          <div>
+            <p className="w-[30px] h-[30px] rounded-full hover:bg-slate-200/60   bg-white/90 flex justify-center items-center">
+              <span className="text-black ">
+                <GiShoppingCart />
+              </span>
+            </p>
+
+            <p
+              className={
+                cart.length > 0
+                  ? "relative left-4 -top-10 w-[20px] h-[20px] rounded-full text-center text-sm text-red-600 bg-white z-10"
+                  : "hidden"
+              }
+            >
+              {cart.length}
+            </p>
+          </div>
+
+          <div>
+            <p className="w-[30px] h-[30px] rounded-full hover:bg-slate-200/60  bg-white/90 flex justify-center items-center">
+              <span className="text-black ">
+                <FaRegHeart />
+              </span>
+            </p>
+
+            <p
+              className={
+                wishList.length > 0
+                  ? "relative left-4 -top-10 w-[20px] h-[20px] rounded-full text-center text-sm text-red-600 bg-white z-10 "
+                  : "hidden"
+              }
+            >
+              {wishList.length}
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

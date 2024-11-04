@@ -4,11 +4,14 @@ import { Rating, ThinStar } from "@smastrom/react-rating";
 
 import { FaRegHeart } from "react-icons/fa";
 import { useCartContext } from "../context/CartContextProvider";
+import { useWishListContext } from "../context/WishListContextProvider";
 
 function ProductDetail({ product }) {
   const { cart, addToCart } = useCartContext({});
+  const { wishList, addToWishList } = useWishListContext();
 
   const [loadedRating, setLoadedRating] = useState(null);
+  const [active, setActive] = useState(false);
 
   const {
     product_id,
@@ -22,7 +25,7 @@ function ProductDetail({ product }) {
     rating,
   } = product || {};
 
-  function handleAddItem() {
+  function handleAddItem(arr, contextSetter, type = "cart") {
     const newItem = {
       product_id,
       title,
@@ -31,17 +34,32 @@ function ProductDetail({ product }) {
       description,
     };
 
-    const bool = checkDulplicate(newItem);
-    if (!bool) {
-      addToCart(newItem);
+    if (type === "wishList") {
+      const bool = checkDulplicate(newItem, arr);
+      if (!bool) {
+        contextSetter(newItem);
+        alert("Congrates for adding an item to wishlist");
+      }
+    } else {
+      contextSetter(newItem);
+      alert("Item added to cart");
     }
   }
 
-  function checkDulplicate(obj) {
-    const isContain = cart.find((item) => item.product_id === obj.product_id);
+  function checkDulplicate(obj, arr) {
+    const isContain = arr.find((item) => item.product_id === obj.product_id);
     if (isContain) {
       return true;
     } else false;
+  }
+
+  function handleAddCartItem() {
+    handleAddItem(cart, addToCart);
+  }
+
+  function handleAddWishItem() {
+    handleAddItem(wishList, addToWishList, "wishList");
+    setActive(true);
   }
 
   useEffect(() => {
@@ -59,6 +77,16 @@ function ProductDetail({ product }) {
           <p className="text-base text-gray-500 font-semibold">
             Price: {price}$
           </p>
+          <p
+            className={`w-[100px] text-center py-1 px-2 rounded-2xl font-bold ${
+              availability
+                ? "bg-[#309c081a] text-lime-500 "
+                : "bg-red-300/20 text-red-500"
+            }`}
+          >
+            {availability ? "In Stock" : "Unavaliable"}
+          </p>
+
           <p className="font-medium text-gray-500">{description}</p>
 
           <div>
@@ -81,17 +109,22 @@ function ProductDetail({ product }) {
 
           <div className="flex items-center gap-2">
             <button
-              onClick={handleAddItem}
-              className="px-4 py-2 text-lg font-semibold bg-custom text-white rounded-full "
+              disabled={!availability}
+              onClick={handleAddCartItem}
+              className="disabled:opacity-60 disabled:bg-gray-400 disabled:text-black/60 px-4 py-2 text-lg font-semibold bg-custom text-white rounded-full "
             >
               Add To Cart
             </button>
 
-            <p className="w-[40px] h-[40px] rounded-full border-2 border-black/20   bg-white flex justify-center items-center">
-              <span className="text-black w-[full] h-[full]">
+            <button
+              disabled={active}
+              onClick={handleAddWishItem}
+              className="w-[40px] h-[40px] rounded-full border-2 border-black/20 text-black  bg-white flex justify-center items-center disabled:opacity-60 disabled:bg-gray-400 disabled:text-black/60 disabled:border-black/10 "
+            >
+              <span className=" w-[full] h-[full]">
                 <FaRegHeart />
               </span>
-            </p>
+            </button>
           </div>
         </div>
       </div>

@@ -4,11 +4,14 @@ import "./index.css";
 import App from "./App.jsx";
 import "@smastrom/react-rating/style.css";
 import CartContextProvider from "./context/CartContextProvider.jsx";
+import WishListContextProvider from "./context/WishListContextProvider.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <CartContextProvider>
-      <App />
+      <WishListContextProvider>
+        <App />
+      </WishListContextProvider>
     </CartContextProvider>
   </StrictMode>
 );

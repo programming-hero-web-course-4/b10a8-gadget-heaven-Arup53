@@ -6,6 +6,7 @@ import Errorpage from "./pages/Errorpage";
 import DashBoard from "./pages/DashBoard";
 import CardDetails from "./pages/CardDetails";
 import { useCartContext } from "./context/CartContextProvider";
+import { useWishListContext } from "./context/WishListContextProvider";
 
 const route = createBrowserRouter([
   {
@@ -43,7 +44,9 @@ const route = createBrowserRouter([
 
 function App() {
   const { cart } = useCartContext();
+  const { wishList } = useWishListContext();
   console.log(cart);
+  console.log(wishList);
 
   return <RouterProvider router={route} />;
 }
