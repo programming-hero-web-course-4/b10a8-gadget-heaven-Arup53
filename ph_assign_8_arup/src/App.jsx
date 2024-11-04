@@ -9,6 +9,7 @@ import { useCartContext } from "./context/CartContextProvider";
 import { useWishListContext } from "./context/WishListContextProvider";
 import Cart from "./components/Cart";
 import WishList from "./components/WishList";
+import Blog from "./pages/Blog";
 
 const route = createBrowserRouter([
   {
@@ -49,6 +50,11 @@ const route = createBrowserRouter([
         path: "details/:product_id",
         element: <CardDetails />,
         loader: () => fetch("../gadgetdata.json"),
+      },
+      {
+        path: "/testimonial",
+        element: <Blog />,
+        loader: () => fetch("../Blog.json"),
       },
     ],
   },

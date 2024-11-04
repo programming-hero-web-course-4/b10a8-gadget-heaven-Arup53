@@ -1,7 +1,4 @@
-import { useCartContext } from "../context/CartContextProvider";
-
 function CardDashboard({ item }) {
-  console.log(item);
   const { title, image, price, description } = item;
 
   return (

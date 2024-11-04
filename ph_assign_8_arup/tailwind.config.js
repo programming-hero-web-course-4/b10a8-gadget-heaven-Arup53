@@ -1,15 +1,15 @@
+const flowbite = require("flowbite-react/tailwind");
+
 /** @type {import('tailwindcss').Config} */
+
 export default {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", flowbite.content()],
   theme: {
     extend: {
       colors: {
         custom: "#9538e2",
       },
-      backgroundImage: {
-        banner: "url(./assets/banner.jpg)",
-      },
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"), flowbite.plugin()],
 };

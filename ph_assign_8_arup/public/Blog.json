@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "What is NAS: Everything About Network Attached Storage",
+    "info": "A Network Attached Storage (NAS) device is a specialized storage device connected to a computer network, providing centralized data storage and file sharing capabilities.NAS devices are often used for backing up data, media streaming, and remote file access.",
+
+    "image": "https://i.ibb.co.com/z8XQhbC/b-1.webp"
+  },
+  {
+    "id": 2,
+    "title": "Intel Core Ultra Desktop Processors (Series 2)",
+    "info": "Intel's Ultra Series CPUs are high-performance processors designed for demanding workloads, such as gaming, content creation, and professional applications.They offer significant improvements in speed, efficiency, and AI capabilities, pushing the boundaries of computing power. ",
+
+    "image": "https://i.ibb.co.com/SKdG7xD/b-2.webp"
+  },
+  {
+    "id": 3,
+    "title": "Meta Launched Orion AR Glasses: A Glimpse into the Future",
+    "info": "Meta's Orion is an upcoming augmented reality (AR) headset designed to provide immersive digital experiences overlaid on the real world.It aims to revolutionize how we interact with technology and information, blurring the lines between the physical and digital realms.",
+    "image": "https://i.ibb.co.com/z2kf1TS/b-3.webp"
+  }
+]

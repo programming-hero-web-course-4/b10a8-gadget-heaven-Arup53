@@ -19,6 +19,7 @@ function Header() {
           <NavLink to={"/"}>Home</NavLink>
           <div>Statistics</div>
           <NavLink to={"/dashboard"}>DashBoard</NavLink>
+          <NavLink to={"/testimonial"}>Review</NavLink>
         </div>
       </div>
 
