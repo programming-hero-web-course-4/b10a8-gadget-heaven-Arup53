@@ -56,15 +56,17 @@ function Header() {
               </span>
             </p>
 
-            <p
-              className={
-                cart.length > 0
-                  ? "relative left-4 -top-10 w-[20px] h-[20px] rounded-full text-center text-sm text-red-600 bg-white z-10"
-                  : "hidden"
-              }
-            >
-              {cart.length}
-            </p>
+            <div className="relative left-4 -top-10 w-[20px] h-[20px]">
+              <p
+                className={
+                  cart.length > 0
+                    ? " w-full h-full rounded-full text-center text-sm text-red-600 bg-white z-10"
+                    : "hidden"
+                }
+              >
+                {cart.length}
+              </p>
+            </div>
           </div>
 
           <div>
@@ -74,15 +76,17 @@ function Header() {
               </span>
             </p>
 
-            <p
-              className={
-                wishList.length > 0
-                  ? "relative left-4 -top-10 w-[20px] h-[20px] rounded-full text-center text-sm text-red-600 bg-white z-10 "
-                  : "hidden"
-              }
-            >
-              {wishList.length}
-            </p>
+            <div className="relative left-4 -top-10 w-[20px] h-[20px]">
+              <p
+                className={
+                  wishList.length > 0
+                    ? " w-full h-ful rounded-full text-center text-sm text-red-600 bg-white z-10 "
+                    : "hidden"
+                }
+              >
+                {wishList.length}
+              </p>
+            </div>
           </div>
         </div>
       </div>

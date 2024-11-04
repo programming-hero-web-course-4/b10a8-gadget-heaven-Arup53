@@ -4,13 +4,17 @@ export const CartContex = createContext();
 
 function CartContextProvider({ children }) {
   const [cart, setCart] = useState([]);
+  const [totalPrice, setPrice] = useState(0);
 
   function addToCart(newCartObj) {
     setCart((prevCart) => [...prevCart, newCartObj]);
   }
+  function setTotalPrice(obj) {
+    setPrice((prev) => prev + obj.price);
+  }
 
   return (
-    <CartContex.Provider value={{ cart, addToCart }}>
+    <CartContex.Provider value={{ cart, addToCart, totalPrice, setTotalPrice }}>
       {children}
     </CartContex.Provider>
   );

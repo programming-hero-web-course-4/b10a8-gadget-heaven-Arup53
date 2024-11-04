@@ -7,6 +7,8 @@ import DashBoard from "./pages/DashBoard";
 import CardDetails from "./pages/CardDetails";
 import { useCartContext } from "./context/CartContextProvider";
 import { useWishListContext } from "./context/WishListContextProvider";
+import Cart from "./components/Cart";
+import WishList from "./components/WishList";
 
 const route = createBrowserRouter([
   {
@@ -32,6 +34,16 @@ const route = createBrowserRouter([
       {
         path: "/dashboard",
         element: <DashBoard />,
+        children: [
+          {
+            path: "/dashboard/cart",
+            element: <Cart />,
+          },
+          {
+            path: "/dashboard/wishlist",
+            element: <WishList />,
+          },
+        ],
       },
       {
         path: "details/:product_id",

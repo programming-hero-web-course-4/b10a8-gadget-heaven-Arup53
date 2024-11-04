@@ -7,7 +7,7 @@ import { useCartContext } from "../context/CartContextProvider";
 import { useWishListContext } from "../context/WishListContextProvider";
 
 function ProductDetail({ product }) {
-  const { cart, addToCart } = useCartContext({});
+  const { cart, addToCart, setTotalPrice } = useCartContext({});
   const { wishList, addToWishList } = useWishListContext();
 
   const [loadedRating, setLoadedRating] = useState(null);
@@ -42,6 +42,7 @@ function ProductDetail({ product }) {
       }
     } else {
       contextSetter(newItem);
+      setTotalPrice(newItem);
       alert("Item added to cart");
     }
   }
