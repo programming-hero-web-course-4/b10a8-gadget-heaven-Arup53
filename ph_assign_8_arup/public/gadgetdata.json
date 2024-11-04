@@ -41,7 +41,7 @@
     "description": "High-performance gaming laptop with NVIDIA GeForce RTX 3080.",
     "Specification": ["32GB RAM", "1TB SSD", "NVIDIA GeForce RTX 3080"],
     "availability": false,
-    "rating": 4.6
+    "rating": 4.3
   },
   {
     "product_id": "LAP005",
@@ -108,7 +108,7 @@
       "A15 Bionic Chip"
     ],
     "availability": true,
-    "rating": 4.5
+    "rating": 3.9
   },
   {
     "product_id": "MOB004",

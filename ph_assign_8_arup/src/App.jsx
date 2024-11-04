@@ -5,6 +5,7 @@ import Gadgets from "./components/Gadgets";
 import Errorpage from "./pages/Errorpage";
 import DashBoard from "./pages/DashBoard";
 import CardDetails from "./pages/CardDetails";
+import { useCartContext } from "./context/CartContextProvider";
 
 const route = createBrowserRouter([
   {
@@ -41,6 +42,9 @@ const route = createBrowserRouter([
 ]);
 
 function App() {
+  const { cart } = useCartContext();
+  console.log(cart);
+
   return <RouterProvider router={route} />;
 }
 

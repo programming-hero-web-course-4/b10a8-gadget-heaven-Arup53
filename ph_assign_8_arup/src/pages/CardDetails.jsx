@@ -16,8 +16,6 @@ function CardDetails() {
     }
   }, [data, product_id]);
 
-  console.log(product);
-
   return (
     <div>
       <Heading title={"Product Details"} />

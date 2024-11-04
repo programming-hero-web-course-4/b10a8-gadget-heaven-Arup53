@@ -9,7 +9,6 @@ function Gadgets() {
   const { category } = useParams();
 
   const [gadget, setGadget] = useState([]);
-  console.log(gadget);
   useEffect(
     function () {
       if (category === "Accesories") {

@@ -6,6 +6,8 @@ import Header from "../components/Header";
 import Heading from "../components/Heading";
 import { useEffect, useState } from "react";
 
+import { Rating } from "@smastrom/react-rating";
+
 function AppLayout() {
   const obj = useLocation();
   const { category } = useParams();
