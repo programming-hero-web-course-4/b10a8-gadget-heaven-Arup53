@@ -1,12 +1,17 @@
 import { Outlet, useLoaderData } from "react-router-dom";
 import Banner from "./Banner";
 import CategoriesBtn from "./CategoriesBtn";
+import Heading from "./Heading";
 
 function Home() {
   const categories = useLoaderData();
 
   return (
-    <div className=" w-[90%] mx-auto">
+    <div className=" w-[95%] mx-auto">
+      <Heading
+        title={"Upgrade Your Tech Accessorize with_Gadget Heaven Accessories"}
+      />
+
       <div className="relative flex justify-center -top-36 my-6">
         <Banner />
       </div>

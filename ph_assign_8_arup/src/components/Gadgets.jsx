@@ -5,11 +5,11 @@ import Errorpage from "../pages/Errorpage";
 
 function Gadgets() {
   const data = useLoaderData();
-  console.log(data);
-  const { category } = useParams();
-  console.log(category);
-  const [gadget, setGadget] = useState([]);
 
+  const { category } = useParams();
+
+  const [gadget, setGadget] = useState([]);
+  console.log(gadget);
   useEffect(
     function () {
       if (category === "Accesories") {

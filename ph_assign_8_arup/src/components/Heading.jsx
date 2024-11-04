@@ -1,18 +1,34 @@
-function Heading() {
-  return (
-    <div className="my-12 flex flex-col items-center">
-      <h3 className="text-5xl text-center font-bold text-white">
-        Upgrade Your Tech Accessorize with <br /> Gadget Heaven Accessories
-      </h3>
+function Heading({ title, paragraph }) {
+  const [first, second] = title.split("_");
 
-      <p className="text-base text-center text-white opacity-60 my-2">
+  return (
+    <div
+      className={`mb-12 bg-custom flex flex-col items-center py-12 ${
+        title.length > 20 && "rounded-b-xl"
+      } min-h-[50vh]`}
+    >
+      <div className="text-center font-bold text-white">
+        {title.length > 20 ? (
+          <h1 className="text-5xl">
+            {first} <br />
+            {second}
+          </h1>
+        ) : (
+          <h1 className="text-2xl">{title}</h1>
+        )}
+      </div>
+
+      <p className="text-base text-center text-white opacity-80 my-2">
         "Explore the latest gadgets that will take your experience to the next
-        level. From smart devices to the coolest accessories, we have it all!"
+        level. From smart devices <br />
+        to the coolest accessories, we have it all!"
       </p>
 
-      <button className="px-8 py-4 text-lg font-semibold bg-white text-custom mt-2 mb-32 rounded-full ">
-        Shop Now
-      </button>
+      {title.length > 20 && (
+        <button className="px-8 py-4 text-lg font-semibold bg-white text-custom mt-2 mb-32 rounded-full ">
+          Shop Now
+        </button>
+      )}
     </div>
   );
 }

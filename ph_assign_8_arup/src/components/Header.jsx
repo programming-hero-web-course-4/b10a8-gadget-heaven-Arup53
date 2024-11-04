@@ -1,18 +1,19 @@
 import { GiShoppingCart } from "react-icons/gi";
 import { FaRegHeart } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   return (
-    <div className=" px-2 md:px-5 md:py-2 flex justify-between items-center gap-5 font-semibold  text-white ">
+    <div className=" px-2 md:px-5 md:py-2 flex justify-between items-center gap-5 font-semibold   ">
       <div>
-        <h3>Gadget Heaven</h3>
+        <h3 className="text-lg">Gadget Heaven</h3>
       </div>
 
       <div className="flex   items-center  gap-5">
         <div className="hidden md:flex gap-4">
-          <div>Home</div>
+          <NavLink to={"/"}>Home</NavLink>
           <div>Statistics</div>
-          <div>DashBoard</div>
+          <NavLink to={"/dashboard"}>DashBoard</NavLink>
         </div>
       </div>
 
