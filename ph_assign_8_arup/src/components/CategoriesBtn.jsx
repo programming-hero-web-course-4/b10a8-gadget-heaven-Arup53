@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 function CategoriesBtn({ categories }) {
   return (
-    <div className="flex flex-col items-cente px-12 py-12 gap-2 text-base ">
+    <div className="flex flex-col items-cente px-12 py-12 gap-2 text-base shadow-xl h-[500px] rounded-2xl ">
       <NavLink
         to={"/"}
         className={({ isActive }) =>

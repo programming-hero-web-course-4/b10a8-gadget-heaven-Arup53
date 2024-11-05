@@ -22,6 +22,11 @@ function Home() {
       <div className="relative flex justify-center -top-36 my-6">
         <Banner />
       </div>
+
+      <h3 className="text-4xl font-bold text-center text-custom">
+        Explore Cutting-Edge Gadgets
+      </h3>
+
       <div className="flex gap-2 justify-between mt-6 mb-12 ">
         <CategoriesBtn categories={categories} />
         <div className="basis-4/5">

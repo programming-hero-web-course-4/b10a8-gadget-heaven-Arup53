@@ -11,7 +11,7 @@ function GadgetCard({ gadget }) {
   } = gadget;
 
   return (
-    <div className="flex flex-col p-2 gap-2 rounded-md shadow-xl ">
+    <div className="flex flex-col p-6  gap-2  shadow-xl  rounded-2xl">
       <figure className="flex justify-center items-center ">
         <img
           className="w-[200px] h-[200px] object-contain  overflow-hidden rounded-md"
