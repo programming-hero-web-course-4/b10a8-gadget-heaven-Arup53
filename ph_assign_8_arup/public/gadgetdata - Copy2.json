@@ -1,0 +1,158 @@
+[
+  {
+    "product_id": "LAP001",
+    "product_title": "M1",
+    "product_image": " https://i.ibb.co.com/pRfnn4X/Mac-Book-Air-M1.png",
+    "category": "Laptop",
+    "price": 999,
+    "description": "Apple MacBook Air with M1 chip, 13.3-inch Retina display.",
+    "Specification": ["8GB RAM", "256GB SSD", "Apple M1 Chip"],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "LAP002",
+    "product_title": "Pm1",
+    "product_image": "https://i.ibb.co.com/4Vn3g0V/Mac-Book-Pro-M1.jpg",
+    "category": "Laptop",
+    "price": 1299,
+    "description": "Apple MacBook Pro with M1 chip, 13-inch Retina display.",
+    "Specification": ["8GB RAM", "512GB SSD", "Apple M1 Chip"],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": "LAP003",
+    "product_title": "G14",
+    "product_image": "https://i.ibb.co.com/FXWGRn8/Asus-ROG-Zephyrus-G14.png",
+    "category": "Laptop",
+    "price": 1449,
+    "description": "Asus ROG Zephyrus G14 gaming laptop with AMD Ryzen 9.",
+    "Specification": ["16GB RAM", "1TB SSD", "AMD Ryzen 9"],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "LAP004",
+    "product_title": "Scar15",
+    "product_image": "https://i.ibb.co.com/wwKrtZt/Asus-ROG-Strix-Scar-15.jpg",
+    "category": "Laptop",
+    "price": 1999,
+    "description": "High-performance gaming laptop with NVIDIA GeForce RTX 3080.",
+    "Specification": ["32GB RAM", "1TB SSD", "NVIDIA GeForce RTX 3080"],
+    "availability": false,
+    "rating": 4.3
+  },
+  {
+    "product_id": "LAP005",
+    "product_title": "M2",
+    "product_image": "https://i.ibb.co.com/4dZnSZw/Mac-Book-Air-M2.jpg",
+    "category": "Laptop",
+    "price": 1199,
+    "description": "Apple MacBook Air with M2 chip, 13.6-inch Liquid Retina display.",
+    "Specification": ["8GB RAM", "256GB SSD", "Apple M2 Chip"],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": "LAP006",
+    "product_title": "X13",
+    "product_image": "https://i.ibb.co.com/wghbGNH/Asus-ROG-Flow-X13.jpg",
+    "category": "Laptop",
+    "price": 1599,
+    "description": "Ultra-thin convertible gaming laptop with AMD Ryzen 9.",
+    "Specification": ["16GB RAM", "1TB SSD", "AMD Ryzen 9"],
+    "availability": false,
+    "rating": 4.5
+  },
+  {
+    "product_id": "MOB001",
+    "product_title": "iPh14",
+    "product_image": "https://i.ibb.co.com/9Y1hDL4/i-Phone-14-Pro.jpg",
+    "category": "Mobile",
+    "price": 999,
+    "description": "Apple iPhone 14 Pro with A16 Bionic chip and 48MP camera.",
+    "Specification": [
+      "128GB Storage",
+      "6.1-inch OLED Display",
+      "A16 Bionic Chip"
+    ],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "MOB002",
+    "product_title": "S23",
+    "product_image": "https://i.ibb.co.com/cv1LPNC/Samsung-Galaxy-S23-Ultra.jpg",
+    "category": "Mobile",
+    "price": 1199,
+    "description": "Samsung Galaxy S23 Ultra with Snapdragon 8 Gen 2 processor.",
+    "Specification": [
+      "256GB Storage",
+      "6.8-inch AMOLED Display",
+      "Snapdragon 8 Gen 2"
+    ],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "MOB003",
+    "product_title": "iPhSE",
+    "product_image": "https://i.ibb.co.com/crk8Ycd/i-Phone-SE-2022.jpg",
+    "category": "Mobile",
+    "price": 429,
+    "description": "Compact iPhone SE with A15 Bionic chip and 4.7-inch display.",
+    "Specification": [
+      "64GB Storage",
+      "4.7-inch LCD Display",
+      "A15 Bionic Chip"
+    ],
+    "availability": true,
+    "rating": 3.9
+  },
+  {
+    "product_id": "MOB004",
+    "product_title": "A54",
+    "product_image": " https://i.ibb.co.com/FxGQ0Gd/Samsung-Galaxy-A54.jpg",
+    "category": "Mobile",
+    "price": 499,
+    "description": "Affordable Samsung Galaxy A54 with great battery life.",
+    "Specification": [
+      "128GB Storage",
+      "6.4-inch Super AMOLED Display",
+      "Exynos 1380"
+    ],
+    "availability": false,
+    "rating": 4.4
+  },
+  {
+    "product_id": "SWT001",
+    "product_title": "Wat8",
+    "product_image": "https://i.ibb.co.com/XyMqfJc/Apple-Watch-Series-8.jpg",
+    "category": "SmartWatches",
+    "price": 399,
+    "description": "Apple Watch Series 8 with advanced health monitoring.",
+    "Specification": [
+      "GPS",
+      "ECG and Blood Oxygen Monitoring",
+      "Always-On Display"
+    ],
+    "availability": true,
+    "rating": 4.9
+  },
+  {
+    "product_id": "SWT002",
+    "product_title": "Wat5",
+    "product_image": "https://i.ibb.co.com/DgrpY43/Samsung-Galaxy-Watch-5.webp",
+    "category": "SmartWatches",
+    "price": 299,
+    "description": "Samsung Galaxy Watch 5 with body composition analysis.",
+    "Specification": [
+      "Bluetooth",
+      "Blood Pressure Monitoring",
+      "AMOLED Display"
+    ],
+    "availability": false,
+    "rating": 4.6
+  }
+]

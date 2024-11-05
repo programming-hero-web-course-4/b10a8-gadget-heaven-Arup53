@@ -58,7 +58,11 @@ const route = createBrowserRouter([
         element: <Review />,
         loader: () => fetch("../review.json"),
       },
-      { path: "/statistics", element: <Statistics /> },
+      {
+        path: "/statistics",
+        element: <Statistics />,
+        loader: () => fetch("../gadgetdata.json"),
+      },
     ],
   },
 ]);
