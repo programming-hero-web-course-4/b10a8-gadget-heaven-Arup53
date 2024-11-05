@@ -19,7 +19,7 @@ function Home() {
         title={"Upgrade Your Tech Accessorize with_Gadget Heaven Accessories"}
       />
 
-      <div className="relative flex justify-center -top-36 my-6">
+      <div className="relative flex justify-center -top-36 mt-6 ">
         <Banner />
       </div>
 
