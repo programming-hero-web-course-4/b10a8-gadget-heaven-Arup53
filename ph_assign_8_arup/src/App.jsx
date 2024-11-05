@@ -1,4 +1,8 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  useLocation,
+} from "react-router-dom";
 import AppLayout from "./layout/AppLayout";
 import Home from "./components/Home";
 import Gadgets from "./components/Gadgets";
@@ -15,6 +19,7 @@ import WishList from "./components/WishList";
 import Review from "./pages/Review";
 import Statistics from "./pages/Statistics";
 import Errorpage from "./pages/Errorpage";
+import { useEffect } from "react";
 
 const route = createBrowserRouter([
   {
@@ -75,10 +80,12 @@ const route = createBrowserRouter([
 function App() {
   const { cart } = useCartContext();
   const { wishList } = useWishListContext();
-  console.log(cart);
-  console.log(wishList);
 
-  return <RouterProvider router={route} />;
+  return (
+    <>
+      <RouterProvider router={route} />;
+    </>
+  );
 }
 
 export default App;
