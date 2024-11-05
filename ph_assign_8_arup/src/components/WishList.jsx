@@ -10,7 +10,7 @@ function WishList() {
 
       <div className="w-[95%] mx-auto grid grid-cols-1 gap-6">
         {wishList.map((item) => (
-          <CardDashboard key={item.product_id} item={item} />
+          <CardDashboard key={item.product_id} item={item} type="wish" />
         ))}
       </div>
     </div>

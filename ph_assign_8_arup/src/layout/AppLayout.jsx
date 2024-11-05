@@ -7,6 +7,7 @@ import Heading from "../components/Heading";
 import { useEffect, useState } from "react";
 
 import { Rating } from "@smastrom/react-rating";
+import { Toaster } from "react-hot-toast";
 
 function AppLayout() {
   const obj = useLocation();
@@ -35,6 +36,8 @@ function AppLayout() {
       </div>
 
       <Footer />
+
+      <Toaster />
     </div>
   );
 }

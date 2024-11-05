@@ -1,5 +1,9 @@
-function CardDashboard({ item }) {
-  const { title, image, price, description } = item;
+import { useCartContext } from "../context/CartContextProvider";
+import { RiDeleteBin2Line } from "react-icons/ri";
+
+function CardDashboard({ item, type = "cart" }) {
+  const { cart, deleteFromCart } = useCartContext();
+  const { product_id, title, image, price, description } = item;
 
   return (
     <div className="flex flex-col gap-12 md:flex-row shadow-xl rounded-2xl">
@@ -16,9 +20,15 @@ function CardDashboard({ item }) {
         <p className="text-lg font-bold text-gray-400">Price: ${price}</p>
       </div>
 
-      <div className="pt-20">
-        <p>delete</p>
-      </div>
+      {type === "cart" && (
+        <div className="pt-20 px-6">
+          <button onClick={() => deleteFromCart(product_id, cart, item)}>
+            <span className="text-2xl">
+              <RiDeleteBin2Line />
+            </span>
+          </button>
+        </div>
+      )}
     </div>
   );
 }

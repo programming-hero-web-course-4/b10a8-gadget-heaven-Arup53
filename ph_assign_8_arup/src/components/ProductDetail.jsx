@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+
 import { Rating, ThinStar } from "@smastrom/react-rating";
 
 import { FaRegHeart } from "react-icons/fa";
 import { useCartContext } from "../context/CartContextProvider";
 import { useWishListContext } from "../context/WishListContextProvider";
+import toast from "react-hot-toast";
 
 function ProductDetail({ product }) {
   const { cart, addToCart, setTotalPrice } = useCartContext({});
@@ -38,12 +39,12 @@ function ProductDetail({ product }) {
       const bool = checkDulplicate(newItem, arr);
       if (!bool) {
         contextSetter(newItem);
-        alert("Congrates for adding an item to wishlist");
+        toast.success("This Item is Wishlisted");
       }
     } else {
       contextSetter(newItem);
       setTotalPrice(newItem);
-      alert("Item added to cart");
+      toast.success("Congrates! Added Item to your Cart");
     }
   }
 

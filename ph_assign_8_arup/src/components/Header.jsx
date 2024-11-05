@@ -16,10 +16,46 @@ function Header() {
 
       <div className="flex   items-center  gap-5">
         <div className="hidden md:flex gap-4">
-          <NavLink to={"/"}>Home</NavLink>
-          <div>Statistics</div>
-          <NavLink to={"/dashboard"}>DashBoard</NavLink>
-          <NavLink to={"/testimonial"}>Review</NavLink>
+          <NavLink
+            to={"/"}
+            className={({ isActive }) =>
+              ` text-base rounded-xl px-2 py-1 hover:scale-100 hover:bg-black/30 hover:text-white ${
+                isActive && "bg-black/40 text-white"
+              }`
+            }
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to={"/statistics"}
+            className={({ isActive }) =>
+              ` text-base rounded-xl px-2 py-1 hover:scale-100 hover:bg-black/30 hover:text-white ${
+                isActive && "bg-black/40 text-white "
+              }`
+            }
+          >
+            Statistics
+          </NavLink>
+          <NavLink
+            to={"/dashboard"}
+            className={({ isActive }) =>
+              ` text-base rounded-xl px-2 py-1 hover:scale-100 hover:bg-black/30 hover:text-white ${
+                isActive && "bg-black/40  text-white"
+              }`
+            }
+          >
+            DashBoard
+          </NavLink>
+          <NavLink
+            to={"/testimonial"}
+            className={({ isActive }) =>
+              ` text-base rounded-xl px-2 py-1 hover:scale-100 hover:bg-black/30 hover:text-white ${
+                isActive && "bg-black/40 text-white "
+              }`
+            }
+          >
+            Review
+          </NavLink>
         </div>
       </div>
 

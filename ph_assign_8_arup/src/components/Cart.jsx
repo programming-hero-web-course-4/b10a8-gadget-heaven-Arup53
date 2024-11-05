@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useCartContext } from "../context/CartContextProvider";
 
 import CardDashboard from "./CardDashboard";
@@ -9,6 +9,10 @@ function Cart() {
   const navigate = useNavigate();
 
   const [cartArr, setCartArr] = useState(cart);
+
+  useEffect(() => {
+    setCartArr(cart);
+  }, [cart]);
 
   function handleSort() {
     const newArr = [...cart].sort((a, b) => b.price - a.price);

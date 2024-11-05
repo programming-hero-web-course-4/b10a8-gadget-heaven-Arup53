@@ -12,10 +12,34 @@ function CartContextProvider({ children }) {
   function setTotalPrice(obj) {
     setPrice((prev) => prev + obj.price);
   }
+  function reduceTotalPrice(obj) {
+    setPrice((prev) => prev - obj.price);
+  }
+
+  function deleteFromCart(productId, arr, obj) {
+    let remove = false;
+    const filteredArr = arr.filter((item) => {
+      if (item.product_id === productId && !remove) {
+        remove = true;
+        return false;
+      }
+      return true;
+    });
+    setCart(filteredArr);
+    reduceTotalPrice(obj);
+  }
 
   return (
     <CartContex.Provider
-      value={{ cart, addToCart, setCart, totalPrice, setTotalPrice, setPrice }}
+      value={{
+        cart,
+        addToCart,
+        setCart,
+        totalPrice,
+        deleteFromCart,
+        setTotalPrice,
+        setPrice,
+      }}
     >
       {children}
     </CartContex.Provider>

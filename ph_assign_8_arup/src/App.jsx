@@ -2,14 +2,16 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AppLayout from "./layout/AppLayout";
 import Home from "./components/Home";
 import Gadgets from "./components/Gadgets";
-import Errorpage from "./pages/Errorpage";
+
 import DashBoard from "./pages/DashBoard";
 import CardDetails from "./pages/CardDetails";
 import { useCartContext } from "./context/CartContextProvider";
 import { useWishListContext } from "./context/WishListContextProvider";
 import Cart from "./components/Cart";
 import WishList from "./components/WishList";
-import Blog from "./pages/Blog";
+
+import Review from "./pages/Review";
+import Statistics from "./pages/Statistics";
 
 const route = createBrowserRouter([
   {
@@ -53,9 +55,10 @@ const route = createBrowserRouter([
       },
       {
         path: "/testimonial",
-        element: <Blog />,
-        loader: () => fetch("../Blog.json"),
+        element: <Review />,
+        loader: () => fetch("../review.json"),
       },
+      { path: "/statistics", element: <Statistics /> },
     ],
   },
 ]);

@@ -18,7 +18,7 @@ function CardDetails() {
 
   return (
     <div>
-      <Heading title={"Product Details"} />
+      <Heading title="Product Details" type="productDetails" />
 
       <div className="min-h-[60vh]">
         <div className="relative flex justify-center -top-36 my-6">

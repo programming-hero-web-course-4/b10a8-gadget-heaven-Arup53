@@ -4,7 +4,7 @@ import Heading from "../components/Heading";
 function DashBoard() {
   return (
     <div>
-      <Heading title={"Dashboard"} />
+      <Heading title="Dashboard" type="dashboard" />
 
       <div className="min-h-[60vh]">
         <Outlet />

@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "username": "John doe",
+    "image": " https://i.ibb.co.com/hySVf2Z/m-1.jpg",
+    "review": "Amazing product selection! Found exactly what I needed.",
+    "rating": 5
+  },
+  {
+    "id": 2,
+    "username": "Kristina Jones",
+    "image": "https://i.ibb.co.com/Sy7ptxM/w-1.jpg",
+    "review": "Great deals and fast shipping, will shop again.",
+    "rating": 4
+  },
+  {
+    "id": 3,
+    "username": "Alex Clark",
+    "image": "https://i.ibb.co.com/tb8VDw3/m-2.jpg",
+    "review": "Good quality, but could improve the packaging.",
+    "rating": 3
+  },
+  {
+    "id": 4,
+    "username": "Emily Rose",
+    "image": "https://i.ibb.co.com/5nY5JfC/w-2.jpg",
+    "review": "Overall good experience, customer service was helpful.",
+    "rating": 4
+  }
+]
