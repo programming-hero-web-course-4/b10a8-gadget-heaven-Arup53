@@ -1,8 +1,6 @@
 import { NavLink } from "react-router-dom";
 
 function CategoriesBtn({ categories }) {
-
-  
   return (
     <div className="flex flex-col items-cente px-12 py-12 gap-2 text-base ">
       <NavLink

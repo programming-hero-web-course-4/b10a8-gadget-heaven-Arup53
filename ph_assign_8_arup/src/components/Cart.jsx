@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { useCartContext } from "../context/CartContextProvider";
+
 import CardDashboard from "./CardDashboard";
+import { useNavigate } from "react-router-dom";
 
 function Cart() {
-  const { cart, totalPrice } = useCartContext();
+  const { cart, totalPrice, setCart, setPrice } = useCartContext();
+  const navigate = useNavigate();
 
   const [cartArr, setCartArr] = useState(cart);
 
@@ -17,7 +20,10 @@ function Cart() {
   }
 
   function handleCloseModal() {
+    setCart([]);
+    setPrice(0);
     document.getElementById("my_modal_1").close();
+    navigate("/");
   }
 
   return (
@@ -34,8 +40,9 @@ function Cart() {
             Sort By Price
           </button>
           <button
+            disabled={(totalPrice !== 0) & (cart.length !== 0) ? false : true}
             onClick={handleModal}
-            className="hover:bg-custom hover:text-white bg-white text-custom border-2 border-custom text-center font-bold px-6 py-2  rounded-full"
+            className="hover:bg-custom hover:text-white bg-white text-custom border-2 border-custom text-center font-bold px-6 py-2 disabled:bg-gray-400 disabled:text-black/30 disabled:border-black/10  rounded-full"
           >
             Purchase
           </button>
@@ -51,13 +58,15 @@ function Cart() {
       {/* Open the modal using document.getElementById('ID').showModal() method */}
 
       <dialog id="my_modal_1" className="modal">
-        <div className="modal-box">
-          <div className="flex flex-col gap-6">
-            <h3 className="font-bold text-lg">Hello!</h3>
-            <p className="py-4">
-              Press ESC key or click the button below to close
-            </p>
-            <button className="btn" onClick={handleCloseModal}>
+        <div className="modal-box w-[400px]">
+          <div className="flex flex-col items-center gap-2">
+            <figure>
+              <img className="w-[50px] h-[50px]" src="/Group.png" alt="" />
+            </figure>
+            <h3 className="font-bold text-lg">Payment Successfully</h3>
+            <p className="py-4 text-black/60">Thanks for purchasing</p>
+            <p className="py-4 text-black/60">Total: ${totalPrice}</p>
+            <button className="btn w-full" onClick={handleCloseModal}>
               koi
             </button>
           </div>

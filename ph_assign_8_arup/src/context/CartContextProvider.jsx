@@ -14,7 +14,9 @@ function CartContextProvider({ children }) {
   }
 
   return (
-    <CartContex.Provider value={{ cart, addToCart, totalPrice, setTotalPrice }}>
+    <CartContex.Provider
+      value={{ cart, addToCart, setCart, totalPrice, setTotalPrice, setPrice }}
+    >
       {children}
     </CartContex.Provider>
   );
