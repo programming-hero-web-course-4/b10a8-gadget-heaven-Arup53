@@ -2,6 +2,13 @@ import { Outlet, useLoaderData } from "react-router-dom";
 import Banner from "./Banner";
 import CategoriesBtn from "./CategoriesBtn";
 import Heading from "./Heading";
+import { useEffect, useState } from "react";
+
+export async function loader() {
+  const res = await fetch("/categories.json");
+  const data = await res.json();
+  return data || [];
+}
 
 function Home() {
   const categories = useLoaderData();

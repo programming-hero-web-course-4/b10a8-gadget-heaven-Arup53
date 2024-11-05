@@ -13,6 +13,22 @@
   },
   {
     "id": 4,
+    "category": "Printer"
+  },
+  {
+    "id": 5,
+    "category": "Speaker"
+  },
+  {
+    "id": 6,
+    "category": "Power Bank"
+  },
+  {
+    "id": 7,
+    "category": "Charger"
+  },
+  {
+    "id": 8,
     "category": "Accesories"
   }
 ]

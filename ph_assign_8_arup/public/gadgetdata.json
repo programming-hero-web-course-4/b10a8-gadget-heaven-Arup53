@@ -4,7 +4,7 @@
     "product_title": "MacBook Air M1",
     "product_image": " https://i.ibb.co.com/pRfnn4X/Mac-Book-Air-M1.png",
     "category": "Laptop",
-    "price": 999,
+    "price": 959,
     "description": "Apple MacBook Air with M1 chip, 13.3-inch Retina display.",
     "Specification": ["8GB RAM", "256GB SSD", "Apple M1 Chip"],
     "availability": true,
@@ -48,7 +48,7 @@
     "product_title": "MacBook Air M2",
     "product_image": "https://i.ibb.co.com/4dZnSZw/Mac-Book-Air-M2.jpg",
     "category": "Laptop",
-    "price": 1199,
+    "price": 1099,
     "description": "Apple MacBook Air with M2 chip, 13.6-inch Liquid Retina display.",
     "Specification": ["8GB RAM", "256GB SSD", "Apple M2 Chip"],
     "availability": true,
@@ -70,7 +70,7 @@
     "product_title": "iPhone 14 Pro",
     "product_image": "https://i.ibb.co.com/9Y1hDL4/i-Phone-14-Pro.jpg",
     "category": "Mobile",
-    "price": 999,
+    "price": 992,
     "description": "Apple iPhone 14 Pro with A16 Bionic chip and 48MP camera.",
     "Specification": [
       "128GB Storage",
@@ -154,5 +154,64 @@
     ],
     "availability": false,
     "rating": 4.6
+  },
+  {
+    "product_id": "PRT001",
+    "product_title": "HP LaserJet Pro M404n",
+    "product_image": " https://i.ibb.co.com/xMzVP5Z/p1.jpg",
+    "category": "Printer",
+    "price": 249,
+    "description": "HP LaserJet Pro M404n monochrome laser printer for efficient printing.",
+    "Specification": ["Monochrome", "Laser", "600 x 600 DPI"],
+    "availability": true,
+    "rating": 4.7
+  },
+  {
+    "product_id": "PRT002",
+    "product_title": "Canon PIXMA G6020",
+    "product_image": "https://i.ibb.co.com/f18SD1h/p-2.webp",
+    "category": "Printer",
+    "price": 279,
+    "description": "Canon PIXMA G6020 wireless MegaTank printer with high-yield ink tanks.",
+    "Specification": ["Color", "Inkjet", "4800 x 1200 DPI"],
+    "availability": true,
+    "rating": 4.6
+  },
+  {
+    "product_id": "SPK001",
+    "product_title": "JBL Charge 5",
+    "product_image": "https://i.ibb.co.com/2SM2C9s/s-1.webp",
+    "category": "Speaker",
+    "price": 179,
+    "description": "Portable Bluetooth speaker with powerful sound and deep bass.",
+    "Specification": ["Bluetooth", "20 hours playtime", "IP67 waterproof"],
+    "availability": true,
+    "rating": 4.8
+  },
+  {
+    "product_id": "SPK002",
+    "product_title": "Sony SRS-XB43",
+    "product_image": "https://i.ibb.co.com/Jyw1pp4/s-3.jpg",
+    "category": "Speaker",
+    "price": 254,
+    "description": "Sony SRS-XB43 EXTRA BASS wireless portable speaker with LED lights.",
+    "Specification": ["Bluetooth", "24 hours playtime", "IP67 waterproof"],
+    "availability": false,
+    "rating": 4.7
+  },
+  {
+    "product_id": "PBK001",
+    "product_title": "Anker PowerCore 20100",
+    "product_image": "https://i.ibb.co.com/02wyqTT/powebank-1.jpg",
+    "category": "Power Bank",
+    "price": 49,
+    "description": "Anker PowerCore 20100 portable power bank with high-capacity battery.",
+    "Specification": [
+      "20100mAh Capacity",
+      "High-speed charging",
+      "Dual USB ports"
+    ],
+    "availability": true,
+    "rating": 4.8
   }
 ]

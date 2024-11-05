@@ -1,7 +1,8 @@
 function Errorpage() {
   return (
-    <div className="flex justify-center items-center w-[62.5rem] h-[25rem] bg-gray-400">
-      <h3 className="text-center text-4xl ">ERROR 404</h3>
+    <div className="flex flex-col justify-center items-center w-[62.5rem]  ">
+      <img src="https://i.ibb.co.com/mT9TX95/error.jpg" alt="" />
+      <h3 className="text-center text-4xl ">No Item Avaliable</h3>
     </div>
   );
 }

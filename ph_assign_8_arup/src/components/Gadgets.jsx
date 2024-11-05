@@ -7,6 +7,7 @@ function Gadgets() {
   const data = useLoaderData();
 
   const { category } = useParams();
+  console.log(category);
 
   const [gadget, setGadget] = useState([]);
   useEffect(
@@ -16,7 +17,7 @@ function Gadgets() {
       }
       if (category) {
         const filterArr = data.filter((data) => data.category === category);
-
+        console.log(filterArr);
         setGadget(filterArr);
       } else {
         setGadget(data);
@@ -27,7 +28,7 @@ function Gadgets() {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
-      {category === "Accesories" ? (
+      {category === "Accesories" || category === "Charger" ? (
         <Errorpage />
       ) : (
         gadget.map((gadget) => (

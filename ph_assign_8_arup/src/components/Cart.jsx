@@ -70,8 +70,11 @@ function Cart() {
             <h3 className="font-bold text-lg">Payment Successfully</h3>
             <p className="py-4 text-black/60">Thanks for purchasing</p>
             <p className="py-4 text-black/60">Total: ${totalPrice}</p>
-            <button className="btn w-full" onClick={handleCloseModal}>
-              koi
+            <button
+              className="btn w-full rounded-full"
+              onClick={handleCloseModal}
+            >
+              Close
             </button>
           </div>
         </div>

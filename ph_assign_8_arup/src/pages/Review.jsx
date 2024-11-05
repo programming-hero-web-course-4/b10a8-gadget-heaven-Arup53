@@ -4,6 +4,12 @@ import Heading from "../components/Heading";
 import { Carousel } from "flowbite-react";
 import ReviewCard from "../components/ReviewCard";
 
+export async function loader() {
+  const res = await fetch("/review.json");
+  const data = await res.json();
+  return data;
+}
+
 function Review() {
   const review = useLoaderData();
 

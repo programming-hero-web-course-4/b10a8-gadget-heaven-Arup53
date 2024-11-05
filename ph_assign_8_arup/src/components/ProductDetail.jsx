@@ -72,7 +72,7 @@ function ProductDetail({ product }) {
     <div className=" min-w-[50rem] min-h-[25rem] px-2 py-2 bg-[#ffffff4d] border-2  rounded-lg  shadow-lg">
       <div className="w-full h-full flex flex-col gap-12 justify-between md:flex-row bg-white rounded-lg p-4 ">
         <figure className="flex justify-center items-center shadow-lg">
-          <img className="h-64 object-contain" src={`${image}`} alt="" />
+          <img className=" h-64 object-contain" src={`${image}`} alt="" />
         </figure>
         <div className="basis-3/4 flex flex-col gap-4 ">
           <h3 className="text-2xl font-bold">{title}</h3>

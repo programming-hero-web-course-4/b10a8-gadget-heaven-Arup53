@@ -2,7 +2,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AppLayout from "./layout/AppLayout";
 import Home from "./components/Home";
 import Gadgets from "./components/Gadgets";
-
+import { loader as categoryLoader } from "./components/Home";
+import { loader as gadgetDataLoader } from "./util/gadgetDataLoader";
+import { loader as reviewDataLoader } from "./pages/Review";
 import DashBoard from "./pages/DashBoard";
 import CardDetails from "./pages/CardDetails";
 import { useCartContext } from "./context/CartContextProvider";
@@ -20,16 +22,16 @@ const route = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-        loader: () => fetch("../categories.json"),
+        loader: categoryLoader,
         children: [
           {
             path: "/",
-            loader: () => fetch("../gadgetdata.json"),
+            loader: gadgetDataLoader,
             element: <Gadgets />,
           },
           {
             path: "/gadget/:category",
-            loader: () => fetch("../gadgetdata.json"),
+            loader: gadgetDataLoader,
             element: <Gadgets />,
           },
         ],
@@ -49,19 +51,19 @@ const route = createBrowserRouter([
         ],
       },
       {
-        path: "details/:product_id",
+        path: "/gadget/:category/details/:product_id",
         element: <CardDetails />,
-        loader: () => fetch("../gadgetdata.json"),
+        loader: gadgetDataLoader,
       },
       {
         path: "/testimonial",
         element: <Review />,
-        loader: () => fetch("../review.json"),
+        loader: reviewDataLoader,
       },
       {
         path: "/statistics",
         element: <Statistics />,
-        loader: () => fetch("../gadgetdata.json"),
+        loader: gadgetDataLoader,
       },
     ],
   },
