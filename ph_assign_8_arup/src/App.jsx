@@ -14,10 +14,13 @@ import WishList from "./components/WishList";
 
 import Review from "./pages/Review";
 import Statistics from "./pages/Statistics";
+import Errorpage from "./pages/Errorpage";
 
 const route = createBrowserRouter([
   {
     element: <AppLayout />,
+    path: "/",
+    errorElement: <Errorpage />,
     children: [
       {
         path: "/",
