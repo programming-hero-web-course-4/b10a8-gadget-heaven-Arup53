@@ -22,7 +22,7 @@ Context API is used for handling and managing data
 
 ## Features of the Project
 
-**3 Key Features Are Given Below**:
+**5 Key Features Are Given Below**:
 
 - **Dynamic Color and Content on Navbar and Heading ** : Used react router useLocation hook and conditional styling to add different colouring for the Home page and other pages; And for dynamic content conditional rendering is used in a Reuseable Heading component.
 
