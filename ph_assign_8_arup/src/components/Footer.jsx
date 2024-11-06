@@ -1,6 +1,6 @@
 function Footer() {
   return (
-    <div className=" mt-12 py-12 flex flex-col justify-center items-center  gap-6 text-center bg-stone-200">
+    <div className=" mt-auto py-12 flex flex-col justify-center items-center  gap-6 text-center  bg-gray-200/40">
       <h3 className="text-xl font-bold my-2">Gadget Heaven</h3>
       <p className="text-sm text-gray-500 mb-12">
         Leading the way in cutting-edge technology and innovation.
@@ -35,7 +35,7 @@ function Footer() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default Footer;
+export default Footer

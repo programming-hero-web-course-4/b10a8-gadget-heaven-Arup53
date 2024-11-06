@@ -2,24 +2,24 @@ import {
   createBrowserRouter,
   RouterProvider,
   useLocation,
-} from "react-router-dom";
-import AppLayout from "./layout/AppLayout";
-import Home from "./components/Home";
-import Gadgets from "./components/Gadgets";
-import { loader as categoryLoader } from "./components/Home";
-import { loader as gadgetDataLoader } from "./util/gadgetDataLoader";
-import { loader as reviewDataLoader } from "./pages/Review";
-import DashBoard from "./pages/DashBoard";
-import CardDetails from "./pages/CardDetails";
-import { useCartContext } from "./context/CartContextProvider";
-import { useWishListContext } from "./context/WishListContextProvider";
-import Cart from "./components/Cart";
-import WishList from "./components/WishList";
+} from "react-router-dom"
+import AppLayout from "./layout/AppLayout"
+import Home from "./components/Home"
+import Gadgets from "./components/Gadgets"
+import { loader as categoryLoader } from "./components/Home"
+import { loader as gadgetDataLoader } from "./util/gadgetDataLoader"
+import { loader as reviewDataLoader } from "./pages/Review"
+import DashBoard from "./pages/DashBoard"
+import CardDetails from "./pages/CardDetails"
+import { useCartContext } from "./context/CartContextProvider"
+import { useWishListContext } from "./context/WishListContextProvider"
+import Cart from "./components/Cart"
+import WishList from "./components/WishList"
 
-import Review from "./pages/Review";
-import Statistics from "./pages/Statistics";
-import Errorpage from "./pages/Errorpage";
-import { useEffect } from "react";
+import Review from "./pages/Review"
+import Statistics from "./pages/Statistics"
+import Errorpage from "./pages/Errorpage"
+import { useEffect } from "react"
 
 const route = createBrowserRouter([
   {
@@ -75,17 +75,17 @@ const route = createBrowserRouter([
       },
     ],
   },
-]);
+])
 
 function App() {
-  const { cart } = useCartContext();
-  const { wishList } = useWishListContext();
+  const { cart } = useCartContext()
+  const { wishList } = useWishListContext()
 
   return (
-    <>
-      <RouterProvider router={route} />;
-    </>
-  );
+    <div>
+      <RouterProvider router={route} />
+    </div>
+  )
 }
 
-export default App;
+export default App

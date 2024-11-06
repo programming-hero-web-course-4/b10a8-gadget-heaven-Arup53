@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 function GadgetCard({ gadget }) {
-  console.log(gadget);
+  
   const {
     product_id: id,
     product_title: title,

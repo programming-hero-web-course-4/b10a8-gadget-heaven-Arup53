@@ -117,7 +117,7 @@ function Header() {
               <p
                 className={
                   wishList.length > 0
-                    ? " w-full h-ful rounded-full text-center text-sm text-red-600 bg-white z-10 "
+                    ? " w-full h-full rounded-full text-center text-sm text-red-600 bg-white z-10 "
                     : "hidden"
                 }
               >
