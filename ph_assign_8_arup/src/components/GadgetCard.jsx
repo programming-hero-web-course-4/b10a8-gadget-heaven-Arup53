@@ -1,14 +1,13 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 
 function GadgetCard({ gadget }) {
-  
   const {
     product_id: id,
     product_title: title,
     product_image: image,
     category,
     price,
-  } = gadget;
+  } = gadget
 
   return (
     <div className="flex flex-col p-6  gap-2  shadow-xl  rounded-2xl">
@@ -23,12 +22,12 @@ function GadgetCard({ gadget }) {
       <p>{price}$</p>
 
       <Link to={`/gadget/${category}/details/${id}`}>
-        <button className="px-2 py-1 text-base font-semibold bg-white border border-custom text-custom mt-2 rounded-full ">
+        <button className="px-2 py-1 text-base font-semibold hover:bg-custom hover:text-white bg-white border border-custom text-custom mt-2 rounded-full ">
           Details
         </button>
       </Link>
     </div>
-  );
+  )
 }
 
-export default GadgetCard;
+export default GadgetCard

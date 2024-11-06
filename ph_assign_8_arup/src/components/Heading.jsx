@@ -1,7 +1,7 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom"
 
 function Heading({ title, paragraph, type = "home" }) {
-  const [first, second] = title.split("_");
+  const [first, second] = title.split("_")
 
   return (
     <div
@@ -55,7 +55,7 @@ function Heading({ title, paragraph, type = "home" }) {
       {title.length > 30 && (
         <Link
           to={"/dashboard"}
-          className="px-8 py-4 text-lg font-semibold bg-white hover:scale-105 text-custom mt-2 mb-32 rounded-full "
+          className="px-8 py-4 text-lg font-semibold bg-white hover:scale-105  text-custom mt-2 mb-32 rounded-full "
         >
           Shop Now
         </Link>
@@ -91,7 +91,7 @@ function Heading({ title, paragraph, type = "home" }) {
         </div>
       )}
     </div>
-  );
+  )
 }
 
-export default Heading;
+export default Heading

@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom"
 
 function CategoriesBtn({ categories }) {
   return (
@@ -6,7 +6,7 @@ function CategoriesBtn({ categories }) {
       <NavLink
         to={"/"}
         className={({ isActive }) =>
-          `px-4  text-base py-2 rounded-full ${
+          `px-4  text-base py-2 rounded-full hover:bg-custom hover:text-white  ${
             isActive ? "bg-custom text-white" : "bg-gray-200"
           }`
         }
@@ -19,7 +19,7 @@ function CategoriesBtn({ categories }) {
           to={`/gadget/${category.category}`}
           key={category.category}
           className={({ isActive }) =>
-            `px-4 text-base py-2 rounded-full ${
+            `px-4 text-base py-2 rounded-full hover:bg-custom hover:text-white  ${
               isActive ? "bg-custom text-white" : "bg-gray-200"
             }`
           }
@@ -28,7 +28,7 @@ function CategoriesBtn({ categories }) {
         </NavLink>
       ))}
     </div>
-  );
+  )
 }
 
-export default CategoriesBtn;
+export default CategoriesBtn
